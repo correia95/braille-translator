@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#4338ca" />
+
+    <title>Braille Translator — text to Grade 1 Braille, and back</title>
+    <meta
+      name="description"
+      content="Convert English text to Grade 1 (uncontracted) Braille and back, using the standard Unicode Braille patterns. Handles letters, digits, capitals and basic punctuation. Runs entirely in your browser, no sign-up."
+    />
+    <link rel="canonical" href="https://braille-translator.correia95.workers.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Braille Translator" />
+    <meta property="og:description" content="Text to Grade 1 Braille and back, using standard Unicode Braille patterns. Free, in your browser." />
+    <meta property="og:url" content="https://braille-translator.correia95.workers.dev/" />
+    <meta property="og:image" content="https://braille-translator.correia95.workers.dev/og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Braille Translator" />
+    <meta name="twitter:description" content="Text to Grade 1 Braille and back, using standard Unicode Braille patterns. Free, in your browser." />
+    <meta name="twitter:image" content="https://braille-translator.correia95.workers.dev/og.svg" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Braille Translator",
+        "url": "https://braille-translator.correia95.workers.dev/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Converts English text to Grade 1 (uncontracted) Braille and back, using the standard Unicode Braille Patterns block, entirely in the browser."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What Braille system does this use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Grade 1 (uncontracted) English Braille — each letter has its own six-dot cell, with no multi-letter contractions. Digits reuse the a-j letter patterns preceded by a number sign, and capital letters are preceded by a capital sign."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What characters are supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Letters a-z (upper and lower case), digits 0-9, spaces, and the punctuation marks comma, semicolon, colon, period, exclamation mark, question mark, apostrophe and hyphen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my text sent to a server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Every conversion happens entirely in your browser."
+            }
+          }
+        ]
+      }
+    </script>
+    <style>
+      .tt-nav { box-sizing: border-box; width: 100%; margin: 0; background: #f1f1f4; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      .tt-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; text-decoration: none; color: #3730a3; font: 600 13px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .tt-nav a:hover { color: #1e1b4b; text-decoration: underline; }
+      .tt-nav svg { width: 14px; height: 14px; flex: none; }
+      @media (prefers-color-scheme: dark) {
+        .tt-nav { background: #15151b; border-bottom-color: rgba(255, 255, 255, 0.12); }
+        .tt-nav a { color: #c7d2fe; }
+        .tt-nav a:hover { color: #e0e7ff; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="tt-nav"><a href="https://tinytools.correia95.workers.dev/" aria-label="TinyTools home — all tools and games"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg><span>TinyTools</span></a></nav>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <p style="text-align: center; padding: 20px">
+        This Braille translator needs JavaScript to run the conversion in your browser.
+      </p>
+    </noscript>
+  </body>
+</html>
